@@ -1,14 +1,13 @@
-<table>
-	<tr>
+<table class="table table-striped">
+	<tr align="left">
 		<td align="left">{{burger_name}}</td>
-
-		<td align="left"><button class="change-devour" data-id="{{id}}" data-newdevour="{{devour}}">
+		<td>&nbsp;</td>
+		<td text-align="right"><button type="button" class="btn btn-primary btn-sm change-devour" data-id="{{id}}" data-newdevour="{{devour}}">
 			{{#if devour}}Eat-Da-Burger!{{/if}}
 			</button></td>
 
 			<td>&nbsp;</td>
-			<td>&nbsp;</td>
 
-		<td align="left"><button class="delete-burger" data-id="{{this.id}}">Delete-Da-Burger!</button></td>
+		<td align="left"><button class="btn btn-primary btn-sm delete-burger" data-id="{{this.id}}">Delete-Da-Burger!</button></td>
 	</tr>
 </table>

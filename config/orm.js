@@ -11,14 +11,14 @@ var orm = {
             cb(result);
         });
     },
-    create: function(table, cols, vals, cb) {
+    create: function(vals, cb) {
         var queryString = "INSERT INTO " + table;
 
-        queryString += " (";
-        queryString += cols.toString();
-        queryString += ") ";
+        // queryString += " (";
+        // queryString += cols.toString();
+        // queryString += ") ";
         queryString += "VALUES (";
-        queryString += printQuestionMarks(vals.length);
+        // queryString += printQuestionMarks(vals.length);
         queryString += ") ";
 
         console.log(queryString);
@@ -31,7 +31,7 @@ var orm = {
         });
     },
     // An example of objColVals would be {name: panther, sleepy: true}
-    update: function(table, objColVals, condition, cb) {
+    update: function(objColVals, condition, cb) {
         var queryString = "UPDATE " + table;
 
         queryString += " SET ";
